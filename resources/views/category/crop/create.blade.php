@@ -42,13 +42,13 @@
 
                 <label for="farmers_note" class="contact100-form-label">{{_('farmers_note')}}</label>
                 <div class="wrap-input100 validate-input" data-validate="Please enter a farmers note about your crop">
-                    <textarea class="form-control input100" name="farmers_note" placeholder="Your farmers_note" row="10"></textarea>
+                    <textarea class="form-control input100" name="farmers_note" placeholder="Please Pass Your Note Here" row="15"></textarea>
                     <span class="focus-input100"></span>
                 </div>
 
                 <div class="container-contact100-form-btn">
-                    <button class="btn btn-primary contact100-form-btn" type="submit">
-                        <span>Create Crop &nbsp;<i class="fa fa-star fa fa-paper-plane-o m-r-6" aria-hidden="true"></i></span>
+                    <button class="btn btn-primary" type="submit">
+                        <span>Create Crop</span>
                     </button>
                 </div>
             </form>

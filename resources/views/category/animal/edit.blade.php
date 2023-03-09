@@ -51,7 +51,7 @@
 
                 <div class="container-contact100-form-btn">
                     <button class="btn btn-primary contact100-form-btn" type="submit">
-                        <span>Update Record &nbsp;<i class="fa fa-star fa fa-paper-plane-o m-r-6" aria-hidden="true"></i></span>
+                        <span>Update Record</span>
                     </button>
                 </div>
             </form>

@@ -17,33 +17,42 @@
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Position</th>
-            <th>Office</th>
-            <th>Age</th>
-            <th>Start date</th>
-            <th>Salary</th>
+            <th>Crop Id</th>
+            <th>Crop Name</th>
+            <th>Farmer's Note</th>
+            <th>Update</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tfoot>
           <tr>
-            <th>Name</th>
-            <th>Position</th>
-            <th>Office</th>
-            <th>Age</th>
-            <th>Start date</th>
-            <th>Salary</th>
+            <th>Crop Id</th>
+            <th>Crop Name</th>
+            <th>Farmer's Note</th>
+            <th>Update</th>
+            <th>Delete</th>
           </tr>
         </tfoot>
         <tbody>
+          @foreach($crops as $crop)
           <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>
-            <td>61</td>
-            <td>2011/04/25</td>
-            <td>$320,800</td>
+            <td>{{$crop->id}}</td>
+            <td>{{$crop->name}}</td>
+            <td>{{Str::Limit($crop->farmers_note,40,'...')}}</td>
+            {{-- <td>
+              <button class="btn btn-primary">
+                <a href="{{route('crop.edit',$crop->id)}}" class="text-light">update</a>
+              </button>
+            </td> --}}
+            <td>
+              <form action="{{route('crop.destroy',$crop->id)}}" method="post">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger">Delete</button>
+              </form>
+            </td>
           </tr>
+          @endforeach
         </tbody>
       </table>
     </div>
