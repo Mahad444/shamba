@@ -42,4 +42,11 @@ class cropController extends Controller
 
         return redirect()->route('crop.index');
     }
+
+    public function destroy($id)
+    {
+        $crop = \App\Models\crops::find($id);
+        $crop->delete();
+        return redirect()->route('crop.index');
+    }
 }
