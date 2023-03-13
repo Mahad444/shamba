@@ -45,8 +45,8 @@ class cropController extends Controller
 
     public function destroy($id)
     {
-        $crop = \App\Models\crops::find($id);
+        $crop = \App\Models\crops::findorFail($id);
         $crop->delete();
-        return redirect()->route('crop.index');
+        return redirect()->route('crop.index')->with('delMsg', 'animal record deleted!');
     }
 }

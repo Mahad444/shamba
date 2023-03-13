@@ -46,6 +46,8 @@ Route::post('/category', [App\Http\Controllers\categoryController::class, 'choos
 Route::get('/category/crop/create', [App\Http\Controllers\cropController::class, 'create'])->name('crop.create');
 Route::get('/category/crop/index', [App\Http\Controllers\cropController::class, 'index'])->name('crop.index');
 Route::post('/category/crop/create', [App\Http\Controllers\cropController::class, 'store'])->name('crop.store');
+Route::delete('/category/crop/{id}/delete', [App\Http\Controllers\cropController::class, 'destroy'])->name('crop.destroy');
+
 
 //animal controllers
 Route::get('/category/animal/create', [App\Http\Controllers\animalController::class, 'create'])->name('animal.create');
